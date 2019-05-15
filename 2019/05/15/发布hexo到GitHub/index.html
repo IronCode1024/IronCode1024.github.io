@@ -334,24 +334,39 @@
   
 
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
+
+
+
+
+
+<!-- valine 评论系统配置 -->
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
-var gitment = new Gitment({
-  id: "http://yoursite.com/2019/05/15/发布hexo到GitHub/",
-  owner: 'https://github.com/IronMan1024',
-  repo: 'https://github.com/IronMan1024/IronMan1024.github.io',
-  oauth: {
-    client_id: '504b7b127f4eb4805ac0',
-    client_secret: 'ddaadcbc8b03361306596da78c42ad3f95cbd616',
-  },
-})
-gitment.render('gitment-ctn')
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "1HGmTpABGQ8v05riqYkrTkWY-gzGzoHsz",
+            app_key: "3V8jmFK6n5clYaEfboCczNTJ",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
 </script>
+    </section>
   
-
-
           </div>
         </div>
       </div>
