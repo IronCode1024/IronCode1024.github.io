@@ -164,33 +164,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><h3 id="Windows10-Git-hexo"><a href="#Windows10-Git-hexo" class="headerlink" title="Windows10+Git+hexo"></a>Windows10+Git+hexo</h3><h2 id="所需环境"><a href="#所需环境" class="headerlink" title="所需环境"></a>所需环境</h2><h3 id="1、Git（必须）-提交你的本地仓库"><a href="#1、Git（必须）-提交你的本地仓库" class="headerlink" title="1、Git（必须）:提交你的本地仓库"></a>1、Git（必须）:提交你的本地仓库</h3><h3 id="2、Nodejs（必须）-安装Hexo需要使用node-js环境"><a href="#2、Nodejs（必须）-安装Hexo需要使用node-js环境" class="headerlink" title="2、Nodejs（必须）:安装Hexo需要使用node.js环境"></a>2、Nodejs（必须）:安装Hexo需要使用node.js环境</h3><h3 id="3、npm-（下载hexo用）"><a href="#3、npm-（下载hexo用）" class="headerlink" title="3、npm （下载hexo用）"></a>3、npm （下载hexo用）</h3><h3 id="安装Nodejs-官网地址下载稳定版hexo"><a href="#安装Nodejs-官网地址下载稳定版hexo" class="headerlink" title="安装Nodejs  官网地址下载稳定版hexo"></a>安装Nodejs  官网地址下载稳定版hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ https://nodejs.org/en/</span><br></pre></td></tr></table></figure>
-<h3 id="国内的npm比较慢，可以下载淘宝的cnpm"><a href="#国内的npm比较慢，可以下载淘宝的cnpm" class="headerlink" title="国内的npm比较慢，可以下载淘宝的cnpm"></a>国内的npm比较慢，可以下载淘宝的cnpm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g cnpm --registry-https://registry.npm.taobao.rog</span><br></pre></td></tr></table></figure>
-<img src="/2019/05/15/发布hexo到GitHub/downloadcnpm.PNG" title="This is an downloadcnpm image">
-<h3 id="安装-hexo-nbsp-nbsp-nbsp-ensp-g为全局安装"><a href="#安装-hexo-nbsp-nbsp-nbsp-ensp-g为全局安装" class="headerlink" title="安装 hexo, &nbsp;&nbsp;&nbsp;  &ensp;-g为全局安装"></a>安装 hexo, &nbsp;&nbsp;&nbsp;  &ensp;-g为全局安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<img src="/2019/05/15/发布hexo到GitHub/hexo4.PNG" title="This is an hexo4 image">
-<h2 id="新建文件夹hexo（hexo名称自己想写什么就写什么）"><a href="#新建文件夹hexo（hexo名称自己想写什么就写什么）" class="headerlink" title="新建文件夹hexo（hexo名称自己想写什么就写什么）"></a>新建文件夹hexo（hexo名称自己想写什么就写什么）</h2><h3 id="进入文件夹，右键打开Git-Bash命令行-输入如下命令"><a href="#进入文件夹，右键打开Git-Bash命令行-输入如下命令" class="headerlink" title="进入文件夹，右键打开Git Bash命令行 输入如下命令"></a>进入文件夹，右键打开Git Bash命令行 输入如下命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init  //初始化hexo</span><br></pre></td></tr></table></figure>
-<h3 id="安装启动服务，并更新package-json文件中的依赖"><a href="#安装启动服务，并更新package-json文件中的依赖" class="headerlink" title="安装启动服务，并更新package.json文件中的依赖"></a>安装启动服务，并更新package.json文件中的依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  npm install hexo-server --save</span><br></pre></td></tr></table></figure>
-<img src="/2019/05/15/发布hexo到GitHub/hexo1.PNG" title="This is an hexo1 image">
-<h2 id="hexo目录结构如下"><a href="#hexo目录结构如下" class="headerlink" title="hexo目录结构如下"></a>hexo目录结构如下</h2><img src="/2019/05/15/发布hexo到GitHub/hexo2.PNG" title="This is an hexo2 image">
-<h3 id="好了，现在可以启动服务预览一下，默认端口是4000"><a href="#好了，现在可以启动服务预览一下，默认端口是4000" class="headerlink" title="好了，现在可以启动服务预览一下，默认端口是4000"></a>好了，现在可以启动服务预览一下，默认端口是4000</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s    //s 是server的简写</span><br><span class="line">$ hexo s -p 5000  //g更改端口为5000</span><br></pre></td></tr></table></figure>
-<h1 id="Hexo博客插入图片"><a href="#Hexo博客插入图片" class="headerlink" title="Hexo博客插入图片"></a>Hexo博客插入图片</h1><h2 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h2><p>图片除了可以放在统一的images文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置博客根目录下的_config.yml来生成。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p>将_config.yml文件中的配置项post_asset_folder设为true后，执行命令$ hexo new your_ArticleName，在source/_posts中会生成文章your_ArticleName.md和同名文件夹your_ArticleName。将图片资源放在your_ArticleName文件夹中，文章就可以使用相对路径引用图片资源了。_posts/your_ArticleName/hexo1.jpg这张照片可以用以下方式访问：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure>
-<h3 id="上述markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。"><a href="#上述markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。" class="headerlink" title="上述markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。"></a>上述markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。</h3><h3 id="如果希望图片在文章和首页中同时显示，可以使用标签插件语法。-posts-post-name-hexo1-jpg这张照片可以用以下方式访问："><a href="#如果希望图片在文章和首页中同时显示，可以使用标签插件语法。-posts-post-name-hexo1-jpg这张照片可以用以下方式访问：" class="headerlink" title="如果希望图片在文章和首页中同时显示，可以使用标签插件语法。_posts/post_name/hexo1.jpg这张照片可以用以下方式访问："></a>如果希望图片在文章和首页中同时显示，可以使用标签插件语法。_posts/post_name/hexo1.jpg这张照片可以用以下方式访问：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img hexo1.jpg This is an hexo1 image %&#125;   //hexo1.jpg 图片名  其他为说明</span><br></pre></td></tr></table></figure>
-<h1 id="使用yilia主题模板"><a href="#使用yilia主题模板" class="headerlink" title="使用yilia主题模板"></a>使用yilia主题模板</h1><h3 id="下载-运行如下代码"><a href="#下载-运行如下代码" class="headerlink" title="下载==运行如下代码"></a>下载==运行如下代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
-<p>下载完之后theme下会多出一个yilia文件夹，这个就是yilia主题文件夹，然后将yilia配置到hexo中，打开_cpnfig.yml文件，将theme: landscape，改为theme: yilia就搞定了。如下：<br><img src="/2019/05/15/发布hexo到GitHub/hexo3.PNG" title="This is an hexo3 image"></p>
-<h1 id="yilia设置头像"><a href="#yilia设置头像" class="headerlink" title="yilia设置头像"></a>yilia设置头像</h1><h2 id="头像的存放位置"><a href="#头像的存放位置" class="headerlink" title="头像的存放位置"></a>头像的存放位置</h2><p>头像/图标图片的存放位置是/themes/yilia/source/下任意位置，可以自己新建一个文件夹存放，我存放在assert文件夹下的images中。</p>
-<h2 id="配置设置"><a href="#配置设置" class="headerlink" title="配置设置"></a>配置设置</h2><p>配置文件为/themes/yilia/_config.yml。设置头像为配置文件中avatar一项，设置图标为配置文件中favicon一项，设置路径的根目录为/themes/yilia/source/。例如，我的头像存放的地址是/themes/yilia/source/assets/me.png，设置则为avatar: /assets/images/me.png。（图标同理）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#你的头像url</span></span><br><span class="line">avatar: /assets/images/HeadPortrait.jpg //不要忘了avater后面有一个空格，切记</span><br></pre></td></tr></table></figure></p>
-<h1 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h1><h2 id="在主题的-config-yml文件中，我们配置-Menu区块"><a href="#在主题的-config-yml文件中，我们配置-Menu区块" class="headerlink" title="在主题的_config.yml文件中，我们配置#Menu区块"></a>在主题的_config.yml文件中，我们配置#Menu区块</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">    主页: /</span><br><span class="line">    随笔: /tags/随笔</span><br></pre></td></tr></table></figure>
-<p>主页和随笔两个key值就是导航中显示的名字，对应的value即为路径，此处相对路径对应的定位也是根目录的source文件夹中，与头像的位置定位相同。</p>
-<h1 id="部署到github-pages"><a href="#部署到github-pages" class="headerlink" title="部署到github pages"></a>部署到github pages</h1><p>设置config1中的deploy属性</p>
-<h3 id="注意：type：、repository：、branch：后面有一个空格，千万不能掉哦"><a href="#注意：type：、repository：、branch：后面有一个空格，千万不能掉哦" class="headerlink" title="注意：type：、repository：、branch：后面有一个空格，千万不能掉哦"></a>注意：type：、repository：、branch：后面有一个空格，千万不能掉哦</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/Kate605690919/Kate605690919.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>repository就是着这个博客所在仓库的地址<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h1 id="更新博客到Git-发布文章"><a href="#更新博客到Git-发布文章" class="headerlink" title="更新博客到Git 发布文章"></a>更新博客到Git 发布文章</h1><p>添加进去的文章如何显示出来呢，只需要下面这两个命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br><span class="line">//也可以合并为一条命令</span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure></p>
-<p>出现下面的提示，说明Git成功<br><img src="/2019/05/15/发布hexo到GitHub/hexo-git.PNG" title="This is an hexo-git image"></p>
-<h1 id="hexo-官方文档"><a href="#hexo-官方文档" class="headerlink" title="hexo 官方文档"></a>hexo 官方文档</h1><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
-
+        <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><h3 id="Windows10-Git-hexo"><a href="#Windows10-Git-hexo" class="headerlink" title="Windows10+Git+hexo"></a>Windows10+Git+hexo</h3>
+        
+          <a class="article-more-a" href="/2019/05/15/发布hexo到GitHub/#more">展开全文 >></a>
+        
       
 
       
@@ -265,77 +242,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/13/My-first-hexo-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/05/13/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-13T06:56:57.125Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/13/hello-world/">展开全文 >></a>
         </p>
       
 

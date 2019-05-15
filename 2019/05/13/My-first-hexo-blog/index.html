@@ -269,11 +269,6 @@
     </a>
   
   
-    <a href="/2019/05/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
 </nav>
 
 
@@ -303,6 +298,22 @@
 
   
 
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2019/05/13/My-first-hexo-blog/",
+  owner: 'https://github.com/IronMan1024',
+  repo: 'https://github.com/IronMan1024/IronMan1024.github.io',
+  oauth: {
+    client_id: '504b7b127f4eb4805ac0',
+    client_secret: 'ddaadcbc8b03361306596da78c42ad3f95cbd616',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
