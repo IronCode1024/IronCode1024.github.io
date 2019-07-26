@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | IronJF-首页</title>
+  <title>使用C#发送邮件的一个简单分享 | IronJF-首页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="IronJF-首页">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="在讲具体的过程之前，我们要先熟悉一个东西，叫做SMTP。相信很多人可能在邮箱里看到过SMTP这个字眼，但究竟是什么呢，又有什么作用呢？我简单介绍一下：SMTP（Simple Mail Transfer Protocol）即简单邮件传输协议,它是一组用于由源地址到目的地址传送邮件的规则，由它来控制信件的中转方式。SMTP协议属于TCP/IP协议簇，它帮助每台计算机在发送或中转信件时找到下一个目的地">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用C#发送邮件的一个简单分享">
+<meta property="og:url" content="http://yoursite.com/2019/07/26/使用C-发送邮件的一个简单分享/index.html">
 <meta property="og:site_name" content="IronJF-首页">
+<meta property="og:description" content="在讲具体的过程之前，我们要先熟悉一个东西，叫做SMTP。相信很多人可能在邮箱里看到过SMTP这个字眼，但究竟是什么呢，又有什么作用呢？我简单介绍一下：SMTP（Simple Mail Transfer Protocol）即简单邮件传输协议,它是一组用于由源地址到目的地址传送邮件的规则，由它来控制信件的中转方式。SMTP协议属于TCP/IP协议簇，它帮助每台计算机在发送或中转信件时找到下一个目的地">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/07/26/使用C-发送邮件的一个简单分享/1563785162(1).jpg">
+<meta property="og:image" content="http://yoursite.com/2019/07/26/使用C-发送邮件的一个简单分享/yonghu.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/26/使用C-发送邮件的一个简单分享/1563785272(1).jpg">
+<meta property="og:image" content="http://yoursite.com/2019/07/26/使用C-发送邮件的一个简单分享/1563785252(1).jpg">
+<meta property="og:updated_time" content="2019-07-26T03:54:49.692Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IronJF-首页">
+<meta name="twitter:title" content="使用C#发送邮件的一个简单分享">
+<meta name="twitter:description" content="在讲具体的过程之前，我们要先熟悉一个东西，叫做SMTP。相信很多人可能在邮箱里看到过SMTP这个字眼，但究竟是什么呢，又有什么作用呢？我简单介绍一下：SMTP（Simple Mail Transfer Protocol）即简单邮件传输协议,它是一组用于由源地址到目的地址传送邮件的规则，由它来控制信件的中转方式。SMTP协议属于TCP/IP协议簇，它帮助每台计算机在发送或中转信件时找到下一个目的地">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/26/使用C-发送邮件的一个简单分享/1563785162(1).jpg">
   
     <link rel="alternative" href="/atom.xml" title="IronJF-首页" type="application/atom+xml">
   
@@ -146,186 +155,226 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-使用C-发送邮件的一个简单分享" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      使用C#发送邮件的一个简单分享
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/26/使用C-发送邮件的一个简单分享/" class="archive-article-date">
+
+        
+        <a href="/2019/07/26/使用C-发送邮件的一个简单分享/" class="archive-article-date">
   	<time datetime="2019-07-26T03:44:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/26/使用C-发送邮件的一个简单分享/">使用C#发送邮件的一个简单分享</a>
-    </h1>
-  
+        
 
-        <div class="article-info info-on-right">
-          
-          
+        <!-- 不蒜子统计访问量 -->
+        
+          <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
 
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- C#发送邮件 -->
+<h2 id="在讲具体的过程之前，我们要先熟悉一个东西，叫做SMTP。"><a href="#在讲具体的过程之前，我们要先熟悉一个东西，叫做SMTP。" class="headerlink" title="在讲具体的过程之前，我们要先熟悉一个东西，叫做SMTP。"></a>在讲具体的过程之前，我们要先熟悉一个东西，叫做SMTP。</h2><p>相信很多人可能在邮箱里看到过SMTP这个字眼，但究竟是什么呢，又有什么作用呢？我简单介绍一下：<br>SMTP（Simple Mail Transfer Protocol）即简单邮件传输协议,它是一组用于由源地址到目的地址传送邮件的规则，由它来控制信件的中转方式。SMTP协议属于TCP/IP协议簇，它帮助每台计算机在发送或中转信件时找到下一个目的地。通过SMTP协议所指定的服务器,就可以把E-mail寄到收信人的服务器上了，整个过程只要几分钟。SMTP服务器则是遵循SMTP协议的发送邮件服务器，用来发送或中转发出的电子邮件。</p>
+<a id="more"></a>
+<p>首先，你要知道，你申请邮箱之后用邮箱来收发电子邮件，电子邮件并不是存在你本地的电脑上的，而是存在邮箱服务供应商的数据中心里，<br>你的邮箱账号和密码就是用来登陆邮箱服务供应商的邮箱服务器的<br>而在这些服务器集群里，会跑着 IMAP 服务器和 SMTP 服务器<br>用户接收邮件时，可以通过 Web 界面来登录邮箱并阅读邮件，也可以通过第三方邮件客户端，包括但不限于 Outlook，Foxmail，Mutt等来收取，而第三方客户端与邮件服务器通信时遵守的协议就是 IMAP</p>
+<p>通过 IMAP 协议，第三方客户端可以下载邮件头或者邮件全文到本地，<br>不管是用户向邮件服务器发送邮件信息，还是邮件服务器向另一台邮件服务器发送邮件信息，都需要走 SMTP 协议</p>
+<p>比如使用 网易邮箱 的用户 Aq 要给使用 QQ 邮箱的用户 Bq 发送一封电子邮件，那么流程如下：<br>首先 Aq 与 网易邮箱 的 SMTP 服务器通信，将邮件标题、内容、收件人邮件地址等信息发送至 网易邮箱 的 SMTP 服务器<br>然后，网易邮箱 的 SMTP 将该封邮件投递至 QQ 邮箱的 SMTP 服务器<br>随后 Bq 收到 QQ 邮箱的提醒，通过 IMAP 协议收取该封邮件</p>
+<p>简而言之就是想要发送邮件给别人，就想要获取SMTP服务器，那么用C#发送邮件怎么办呢？<br>大部分的邮箱服务供应商会提供SMTP第三方授权，我们获取到自己邮箱的SMTP授权码就能用它发送邮件了！</p>
+<h4 id="下面以QQ邮箱为例，获取SMTP"><a href="#下面以QQ邮箱为例，获取SMTP" class="headerlink" title="下面以QQ邮箱为例，获取SMTP"></a>下面以QQ邮箱为例，获取SMTP</h4><p>1、打开设置<br><img src="/2019/07/26/使用C-发送邮件的一个简单分享/1563785162(1).jpg" title="This is an hexo1 image"><br><br><br>2、选择账户<br><img src="/2019/07/26/使用C-发送邮件的一个简单分享/yonghu.png" title="This is an hexo1 image"><br><br><br>3、开启POP3/SMTP服务，此时会跳出一个弹窗，需要手机发送验证信息到指定的号码，发送之后点击我已发送就能获取到你的邮箱的SMTP授权码啦。简单吧！<br><img src="/2019/07/26/使用C-发送邮件的一个简单分享/1563785272(1).jpg" title="This is an hexo1 image"><br><img src="/2019/07/26/使用C-发送邮件的一个简单分享/1563785252(1).jpg" title="This is an hexo1 image"></p>
+<h3 id="下面贴上代码（以下程序是基于MVC项目的）："><a href="#下面贴上代码（以下程序是基于MVC项目的）：" class="headerlink" title="下面贴上代码（以下程序是基于MVC项目的）："></a>下面贴上代码（以下程序是基于MVC项目的）：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">System.Web.Mail  // 命名空间:</span><br><span class="line"></span><br><span class="line">static string InputVerificationCode=<span class="string">""</span>;</span><br><span class="line">[HttpPost]</span><br><span class="line">public JsonResult VerificationCode(Model.UserInfoRegister Uifr)</span><br><span class="line">&#123;</span><br><span class="line">    InputVerificationCode = <span class="string">""</span>;//初始化接收验证码的变量为空</span><br><span class="line">    try</span><br><span class="line">    &#123;</span><br><span class="line">        //collection[<span class="string">"Email"</span>]</span><br><span class="line">        string Email = Request[<span class="string">"UserEmail"</span>];</span><br><span class="line">        Random Rdm = new Random();</span><br><span class="line">        //产生0到10的随机数</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (int i = 0; i &lt; 6; i++)//六位数验证码</span><br><span class="line">        &#123;</span><br><span class="line">            InputVerificationCode += Rdm.Next(10).ToString();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //SmtpServer: 发送电邮所使用的 SMTP 服务器的名称。</span><br><span class="line">        //SmtpPort: 发送 SMTP transactions(电邮) 所用的服务器端口。</span><br><span class="line">        //EnableSsl: True，如果服务器应该使用 SSL(Secure Socket Layer) 加密。</span><br><span class="line">        //UserName: 发送电邮所用的 SMTP email 账户的名称。</span><br><span class="line">        //Password: SMTP 电邮账户的密码。</span><br><span class="line">        //From: 出现在 from 栏中的电邮地址（通常与 UserName 相同）。</span><br><span class="line">        WebMail.SmtpServer = <span class="string">"smtp.qq.com"</span>;//发送方邮件服务器</span><br><span class="line">        WebMail.SmtpPort = 587;  // 端口</span><br><span class="line">        WebMail.EnableSsl = <span class="literal">true</span>;</span><br><span class="line">        WebMail.UserName = <span class="string">"邮箱用户名不要后缀（如：liu@qq.com,这里只要liu即可）"</span>;</span><br><span class="line">        WebMail.Password = <span class="string">"这里是邮箱授权码"</span>;// -邮箱授权码 需要获取SMTP</span><br><span class="line">        WebMail.From = <span class="string">"这里是发送方的邮箱 （如：123@qq.com）"</span>; // 发送方邮箱</span><br><span class="line"></span><br><span class="line">        WebMail.Send(Email, <span class="string">"邮件标题"</span>, <span class="string">"邮件内容"</span> + <span class="string">"验证码为："</span> + InputVerificationCode.ToString());</span><br><span class="line"></span><br><span class="line">        ViewBag.SendSuccess = <span class="string">"发送成功"</span>;</span><br><span class="line">        <span class="built_in">return</span> Json(InputVerificationCode);</span><br><span class="line">    &#125;</span><br><span class="line">    catch (Exception e)</span><br><span class="line">    &#123;</span><br><span class="line">        string Err = e.Message;</span><br><span class="line">        <span class="built_in">return</span> Json(InputVerificationCode);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/pyc_01/article/details/96878359" target="_blank" rel="noopener">使用C#发送邮件的一个简单分享</a><br><a href="https://blog.csdn.net/pyc_01" target="_blank" rel="noopener">CSDN</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的蛋挞<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/images/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/images/weixincode.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/26/使用C-发送邮件的一个简单分享/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/17/使用MVC-EntityFramework实现增删改查/" class="archive-article-date">
-  	<time datetime="2019-06-17T08:34:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/17/使用MVC-EntityFramework实现增删改查/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用MVC+EntityFramework实现增删改查</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/17/使用MVC-EntityFramework实现增删改查/">使用MVC+EntityFramework实现增删改查</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+
+  
+
+  
+
+
+
+
+
+
+<!-- valine 评论系统配置 -->
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "1HGmTpABGQ8v05riqYkrTkWY-gzGzoHsz",
+            app_key: "3V8jmFK6n5clYaEfboCczNTJ",
+            placeholder: "欢迎评论",
+            avatar:"mm",
+            //visitor: true //阅读量统计
+        });
+    }
+</script>
+    </section>
     
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/04/EntityFramework-Code-First-数据建模/" class="archive-article-date">
-  	<time datetime="2019-06-04T06:21:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/04/EntityFramework-Code-First-数据建模/">EntityFramework Code First 数据建模</a>
-    </h1>
-  
+     <!-- id 将作为查询条件 -->
+     <!-- 阅读量统计 -->
+<!-- <span id="<Your/Path/Name>" class="leancloud-visitors" data-flag-title="Your Article Title">
+  <em class="post-meta-item-text">阅读量 </em>
+  <i class="leancloud-visitors-count">1000000</i>
+</span> -->
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/19/C-ADO.NET操作数据库类-SQLHelper/" class="archive-article-date">
-  	<time datetime="2019-05-19T13:53:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/19/C-ADO.NET操作数据库类-SQLHelper/">自定义C#ADO.NET操作数据库类--SQLHelper</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/15/发布hexo到GitHub/" class="archive-article-date">
-  	<time datetime="2019-05-15T05:22:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/15/发布hexo到GitHub/">发布hexo到GitHub</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/13/My-first-hexo-blog/" class="archive-article-date">
-  	<time datetime="2019-05-13T09:02:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/13/My-first-hexo-blog/">My first hexo blog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
-
           </div>
         </div>
       </div>
@@ -367,8 +416,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
