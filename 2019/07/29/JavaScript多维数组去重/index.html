@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | IronJF-首页</title>
+  <title>JavaScript多维数组去重 | IronJF-首页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="IronJF-首页">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293&amp;lt;!DOCTYPE html&amp;gt;&amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript多维数组去重">
+<meta property="og:url" content="http://yoursite.com/2019/07/29/JavaScript多维数组去重/index.html">
 <meta property="og:site_name" content="IronJF-首页">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293&amp;lt;!DOCTYPE html&amp;gt;&amp;l">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-29T10:25:31.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IronJF-首页">
+<meta name="twitter:title" content="JavaScript多维数组去重">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293&amp;lt;!DOCTYPE html&amp;gt;&amp;l">
   
     <link rel="alternative" href="/atom.xml" title="IronJF-首页" type="application/atom+xml">
   
@@ -146,240 +150,225 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaScript多维数组去重" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/28/C-使用Oracle-ManagedDataAccess操作oracle数据库/" class="archive-article-date">
-  	<time datetime="2019-08-28T06:56:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/28/C-使用Oracle-ManagedDataAccess操作oracle数据库/">C#使用Oracle.ManagedDataAccess操作oracle数据库</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript多维数组去重
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/29/JavaScript多维数组去重/" class="archive-article-date">
+        
+        <a href="/2019/07/29/JavaScript多维数组去重/" class="archive-article-date">
   	<time datetime="2019-07-29T10:14:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/29/JavaScript多维数组去重/">JavaScript多维数组去重</a>
-    </h1>
-  
+        
 
-        <div class="article-info info-on-right">
-          
-          
+        <!-- 不蒜子统计访问量 -->
+        
+          <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
 
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;数组去重&lt;/title&gt;</span><br><span class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        //已知如下数组：</span><br><span class="line">        // var arr = [ [1, 2, 2], [3, 4, 5, 5], [6, 7, 8, 9, [11, 12, [12, 13, [14] ] ] ], 10];</span><br><span class="line">        // 编写一个程序将数组扁平化去并除其中重复部分数据，最终得到一个升序且不重复的数组</span><br><span class="line">        window.onload=<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            //var divs = document.getElementById(<span class="string">'divPrint'</span>);</span><br><span class="line">            var arr = [</span><br><span class="line">                [1, 2, 2],</span><br><span class="line">                [3, 4, 5, 5],</span><br><span class="line">                [6, 7, 8, 9, [11, 12, [12, 13, [14]]]], 10</span><br><span class="line">            ];</span><br><span class="line"></span><br><span class="line">            var arr1 = new Array();</span><br><span class="line">            var n = 0;</span><br><span class="line">            //使用Array.prototype.eachall  遍历出多维数组，赋值给一个新的一位数组，将数组扁平化</span><br><span class="line">            arr.eachall(<span class="keyword">function</span>(item) &#123;</span><br><span class="line">                arr1[n] = item;</span><br><span class="line">                n += 1;</span><br><span class="line">            &#125;);</span><br><span class="line">            console.log(<span class="string">"123"</span>)</span><br><span class="line">            console.info(<span class="string">"123456"</span>)</span><br><span class="line">            console.debug(<span class="string">"123456789"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            var i = arr1.length,</span><br><span class="line">                j;</span><br><span class="line">            var temp;</span><br><span class="line">            <span class="keyword">while</span> (i &gt; 0) &#123; //冒泡排序</span><br><span class="line">                <span class="keyword">for</span> (j = 0; j &lt; i - 1; j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (arr1[j] == arr1[j + 1]) &#123;</span><br><span class="line">                        arr1.remove(arr1[j]);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (arr1[j] &gt; arr1[j + 1]) &#123;</span><br><span class="line">                        temp = arr1[j];</span><br><span class="line">                        arr1[j] = arr1[j + 1];</span><br><span class="line">                        arr1[j + 1] = temp;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">            //遍历输出去重之后的数组</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">let</span> index = 0; index &lt; arr1.length; index++) &#123;</span><br><span class="line">                document.getElementById(<span class="string">'divPrint'</span>).innerText += arr1[index] + <span class="string">","</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        //刪除数组中的某一个元素的构造方法</span><br><span class="line">        Array.prototype.remove = <span class="keyword">function</span>(val) &#123;</span><br><span class="line">            var index = this.indexOf(val);</span><br><span class="line">            <span class="keyword">if</span> (index &gt; -1) &#123;</span><br><span class="line">                this.splice(index, 1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        //遍历多维数组的构造方法eachall</span><br><span class="line">        Array.prototype.eachall = <span class="keyword">function</span>(fn) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                //声明一个计数器</span><br><span class="line">                this.i || (this.i = 0)</span><br><span class="line">                    //判断数组是否存在且传的值是一个函数</span><br><span class="line">                <span class="keyword">if</span> (this.length &gt; 0 &amp;&amp; fn.constructor == Function) &#123;</span><br><span class="line">                    //循环</span><br><span class="line">                    <span class="keyword">while</span> (this.i &lt; this.length) &#123;</span><br><span class="line">                        var e = this[this.i];</span><br><span class="line">                        //判断当前值是不是数组,如果是数组进行递归e.eachall,否则执行回调函数fn.call</span><br><span class="line">                        <span class="keyword">if</span> (e &amp;&amp; e.constructor == Array) &#123;</span><br><span class="line">                            e.eachall(fn);</span><br><span class="line">                        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                            fn.call(e, e);</span><br><span class="line">                        &#125;;</span><br><span class="line">                        this.i++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    //回收计数器，变量回收</span><br><span class="line">                    this.i = null;</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125; catch (err) &#123;</span><br><span class="line">                console.log(<span class="string">"have error:"</span> + err); //错误处理</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"divPrint"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的蛋挞<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/images/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/images/weixincode.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/29/JavaScript多维数组去重/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/26/使用C-发送邮件的一个简单分享/" class="archive-article-date">
-  	<time datetime="2019-07-26T03:44:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/08/28/C-使用Oracle-ManagedDataAccess操作oracle数据库/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          C#使用Oracle.ManagedDataAccess操作oracle数据库
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/26/使用C-发送邮件的一个简单分享/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用C#发送邮件的一个简单分享</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/26/使用C-发送邮件的一个简单分享/">使用C#发送邮件的一个简单分享</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+
+  
+
+  
+
+
+
+
+
+
+<!-- valine 评论系统配置 -->
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "1HGmTpABGQ8v05riqYkrTkWY-gzGzoHsz",
+            app_key: "3V8jmFK6n5clYaEfboCczNTJ",
+            placeholder: "欢迎评论",
+            avatar:"mm",
+            //visitor: true //阅读量统计
+        });
+    }
+</script>
+    </section>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/17/使用MVC-EntityFramework实现增删改查/" class="archive-article-date">
-  	<time datetime="2019-06-17T08:34:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/17/使用MVC-EntityFramework实现增删改查/">使用MVC+EntityFramework实现增删改查</a>
-    </h1>
-  
+     <!-- id 将作为查询条件 -->
+     <!-- 阅读量统计 -->
+<!-- <span id="<Your/Path/Name>" class="leancloud-visitors" data-flag-title="Your Article Title">
+  <em class="post-meta-item-text">阅读量 </em>
+  <i class="leancloud-visitors-count">1000000</i>
+</span> -->
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/04/EntityFramework-Code-First-数据建模/" class="archive-article-date">
-  	<time datetime="2019-06-04T06:21:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/04/EntityFramework-Code-First-数据建模/">EntityFramework Code First 数据建模</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/19/C-ADO.NET操作数据库类-SQLHelper/" class="archive-article-date">
-  	<time datetime="2019-05-19T13:53:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/19/C-ADO.NET操作数据库类-SQLHelper/">自定义C#ADO.NET操作数据库类--SQLHelper</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/15/发布hexo到GitHub/" class="archive-article-date">
-  	<time datetime="2019-05-15T05:22:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/15/发布hexo到GitHub/">发布hexo到GitHub</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/13/My-first-hexo-blog/" class="archive-article-date">
-  	<time datetime="2019-05-13T09:02:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/13/My-first-hexo-blog/">My first hexo blog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
-
           </div>
         </div>
       </div>
@@ -421,8 +410,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

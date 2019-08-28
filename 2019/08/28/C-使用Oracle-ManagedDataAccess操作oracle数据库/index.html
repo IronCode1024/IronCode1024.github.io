@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | IronJF-首页</title>
+  <title>C#使用Oracle.ManagedDataAccess操作oracle数据库 | IronJF-首页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="IronJF-首页">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="准备工作一、准备好需要连接的数据库12345678910111213141516171819202122CREATE TABLE StuClass(       Class_Id int primary key not null,       Class_Name varchar2(50))CREATE TABLE Students(       Stu_Id int primary key no">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#使用Oracle.ManagedDataAccess操作oracle数据库">
+<meta property="og:url" content="http://yoursite.com/2019/08/28/C-使用Oracle-ManagedDataAccess操作oracle数据库/index.html">
 <meta property="og:site_name" content="IronJF-首页">
+<meta property="og:description" content="准备工作一、准备好需要连接的数据库12345678910111213141516171819202122CREATE TABLE StuClass(       Class_Id int primary key not null,       Class_Name varchar2(50))CREATE TABLE Students(       Stu_Id int primary key no">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190822115156457.PNG">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190822115233403.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3B5Y18wMQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190822115405916.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3B5Y18wMQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-08-28T06:57:08.895Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IronJF-首页">
+<meta name="twitter:title" content="C#使用Oracle.ManagedDataAccess操作oracle数据库">
+<meta name="twitter:description" content="准备工作一、准备好需要连接的数据库12345678910111213141516171819202122CREATE TABLE StuClass(       Class_Id int primary key not null,       Class_Name varchar2(50))CREATE TABLE Students(       Stu_Id int primary key no">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190822115156457.PNG">
   
     <link rel="alternative" href="/atom.xml" title="IronJF-首页" type="application/atom+xml">
   
@@ -146,240 +154,222 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-C-使用Oracle-ManagedDataAccess操作oracle数据库" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      C#使用Oracle.ManagedDataAccess操作oracle数据库
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/28/C-使用Oracle-ManagedDataAccess操作oracle数据库/" class="archive-article-date">
+
+        
+        <a href="/2019/08/28/C-使用Oracle-ManagedDataAccess操作oracle数据库/" class="archive-article-date">
   	<time datetime="2019-08-28T06:56:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/28/C-使用Oracle-ManagedDataAccess操作oracle数据库/">C#使用Oracle.ManagedDataAccess操作oracle数据库</a>
-    </h1>
-  
+        
 
-        <div class="article-info info-on-right">
-          
-          
+        <!-- 不蒜子统计访问量 -->
+        
+          <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
 
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h6 id="一、准备好需要连接的数据库"><a href="#一、准备好需要连接的数据库" class="headerlink" title="一、准备好需要连接的数据库"></a>一、准备好需要连接的数据库</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE StuClass(</span><br><span class="line">       Class_Id int primary key not null,</span><br><span class="line">       Class_Name varchar2(50)</span><br><span class="line">)</span><br><span class="line">CREATE TABLE Students(</span><br><span class="line">       Stu_Id int primary key not null,</span><br><span class="line">       Stu_Name varchar(20),</span><br><span class="line">       --Stu_Sex varchar(4) check(Stu_Sex=<span class="string">"男"</span> or Stu_Sex=<span class="string">"女"</span>),</span><br><span class="line">       Stu_Sex varchar(4),</span><br><span class="line">       Stu_Birthday date null,</span><br><span class="line">       Class_Id numeric(10),</span><br><span class="line">       constraint fk_column foreign key(Class_Id)  --外键</span><br><span class="line">       references StuClass(Class_Id)</span><br><span class="line">       on delete cascade</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">INSERT INTO StuClass (Class_Id,Class_Name) VALUES(101,<span class="string">'高一（1）班'</span>)</span><br><span class="line">INSERT INTO StuClass (Class_Id,Class_Name) VALUES(102,<span class="string">'高一（2）班'</span>)</span><br><span class="line"></span><br><span class="line">INSERT INTO Students (Stu_Name,Stu_Sex,Stu_Birthday,Class_Id) VALUES(1,<span class="string">'孙七'</span>,<span class="string">'男'</span>,to_date ( <span class="string">'2008-07-02'</span> , <span class="string">'YYYY-MM-DD HH24:MI:SS'</span>),102)</span><br><span class="line">INSERT INTO Students (Stu_Name,Stu_Sex,Stu_Birthday,Class_Id) VALUES(2,<span class="string">'张三'</span>,<span class="string">'女'</span>,TO_DATE(<span class="string">'2019-07-02 15:31:34'</span>,<span class="string">'YYYY-MM-DD HH24:MI:SS'</span>),101)</span><br><span class="line">INSERT INTO Students (Stu_Id,Stu_Name,Stu_Sex,Stu_Birthday,Class_Id) VALUES(3,<span class="string">'赵六'</span>,<span class="string">'男'</span>,to_date ( <span class="string">'1998-08-03 15:31:34'</span> , <span class="string">'YYYY-MM-DD HH24:MI:SS'</span>),102)</span><br></pre></td></tr></table></figure>
+<h6 id="二、引用Oracle-ManagedDataAccess的dll包，这里使用NuGet安装"><a href="#二、引用Oracle-ManagedDataAccess的dll包，这里使用NuGet安装" class="headerlink" title="二、引用Oracle.ManagedDataAccess的dll包，这里使用NuGet安装"></a>二、引用Oracle.ManagedDataAccess的dll包，这里使用NuGet安装</h6><p><img src="https://img-blog.csdnimg.cn/20190822115156457.PNG" alt="在这里插入图片描述"><br>搜索Oracle.ManagedDataAccess，点击右侧得安装<br><img src="https://img-blog.csdnimg.cn/20190822115233403.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3B5Y18wMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>下载完成之后看一下依赖中是否有dll</p>
+<p><img src="https://img-blog.csdnimg.cn/20190822115405916.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3B5Y18wMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="包安装完成之后咱们就可以来写代码啦"><a href="#包安装完成之后咱们就可以来写代码啦" class="headerlink" title="包安装完成之后咱们就可以来写代码啦"></a>包安装完成之后咱们就可以来写代码啦</h3><p>新建一个DataBases基础类，用来访问数据库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">class DataBases</span><br><span class="line">    &#123;</span><br><span class="line">        OracleConnection conn;</span><br><span class="line">        public DataBases()//初始化数据库连接字符串</span><br><span class="line">        &#123;</span><br><span class="line">        //数据源字符串其中localhost是你oracle数据库的机器ip,port是你oracle数据库的端口号,IRON是你的用户名</span><br><span class="line">            string connString = (@<span class="string">"DATA SOURCE= (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = orcl)));PASSWORD=IRON123;USER ID=IRON"</span>);</span><br><span class="line">            conn = new OracleConnection(connString);</span><br><span class="line">        &#125;</span><br><span class="line">        public OracleDataReader getShow(string sql)</span><br><span class="line">        &#123;</span><br><span class="line">            conn.Open();</span><br><span class="line">            OracleCommand cmd = new OracleCommand(sql, conn);</span><br><span class="line">            OracleDataReader rd = cmd.ExecuteReader(CommandBehavior.CloseConnection);</span><br><span class="line">            <span class="built_in">return</span> rd;</span><br><span class="line">        &#125;</span><br><span class="line">        /// &lt;summary&gt;</span><br><span class="line">        /// 查询操作  方法跟ADO.NET的操作基本一样</span><br><span class="line">        /// &lt;/summary&gt;</span><br><span class="line">        /// &lt;param name=<span class="string">"sql"</span>&gt;要执行的sql脚本&lt;/param&gt;</span><br><span class="line">        /// &lt;returns&gt;&lt;/returns&gt;</span><br><span class="line">        public DataSet Queues(string sql)</span><br><span class="line">        &#123;</span><br><span class="line">            conn.Open();</span><br><span class="line">            OracleCommand cmd = new OracleCommand(sql, conn);</span><br><span class="line">            OracleDataAdapter dap = new OracleDataAdapter(cmd);</span><br><span class="line">            DataSet ds = new DataSet();</span><br><span class="line">            dap.Fill(ds);</span><br><span class="line">            dap.Dispose();</span><br><span class="line">            //int sdr = cmd.ExecuteNonQuery();</span><br><span class="line">            conn.Close();</span><br><span class="line">            <span class="built_in">return</span> ds;</span><br><span class="line">        &#125;</span><br><span class="line">        /// &lt;summary&gt;</span><br><span class="line">        /// 添加方法</span><br><span class="line">        /// &lt;/summary&gt;</span><br><span class="line">        /// &lt;param name=<span class="string">"sql"</span>&gt;&lt;/param&gt;</span><br><span class="line">        /// &lt;returns&gt;&lt;/returns&gt;</span><br><span class="line">        public int Inserts(string sql)</span><br><span class="line">        &#123;</span><br><span class="line">            conn.Open();</span><br><span class="line">            OracleCommand cmd = new OracleCommand(sql, conn);</span><br><span class="line">            int i = cmd.ExecuteNonQuery();</span><br><span class="line">            conn.Close();</span><br><span class="line">            <span class="built_in">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>基本类完成后咱们就可以通过这个类来访问到数据库啦，接着写个测试，操作一下数据库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">class Program</span><br><span class="line">    &#123;</span><br><span class="line">        static DataBases db = new DataBases();</span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            try</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"输入操作：1/添加,2/查询，c/重新输入，e/退出"</span>);</span><br><span class="line">                    string caozuo = Console.ReadLine();</span><br><span class="line">                    switch (caozuo)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">case</span> <span class="string">"1"</span>:</span><br><span class="line">                            Console.WriteLine(<span class="string">"添加,按c查重新选择操作"</span>);</span><br><span class="line">                            string strAdd = Console.ReadLine();</span><br><span class="line">                            <span class="keyword">if</span> (strAdd==<span class="string">"c"</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="built_in">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                            <span class="keyword">else</span></span><br><span class="line">                            &#123;</span><br><span class="line">                                Console.Write(<span class="string">"编号："</span>); int Stu_Id = int.Parse(Console.ReadLine());</span><br><span class="line">                                Console.Write(<span class="string">"姓名："</span>); string Stu_Name = Console.ReadLine();</span><br><span class="line">                                Console.Write(<span class="string">"性别："</span>); string Stu_Sex = Console.ReadLine();</span><br><span class="line">                                Console.Write(<span class="string">"生日："</span>); DateTime Stu_Birthday = Convert.ToDateTime(Console.ReadLine());</span><br><span class="line">                                Console.Write(<span class="string">"班级编号："</span>); int Class_Id = int.Parse(Console.ReadLine());</span><br><span class="line">                                string sqladd=string.Format(@<span class="string">"INSERT INTO Students (Stu_Id,Stu_Name,Stu_Sex,Stu_Birthday,Class_Id) </span></span><br><span class="line"><span class="string">VALUES("</span>+ Stu_Id + <span class="string">",'"</span>+ Stu_Name + <span class="string">"','"</span>+ Stu_Sex + <span class="string">"',TO_DATE('"</span> + Stu_Birthday + <span class="string">"','YYYY-MM-DD HH24:MI:SS'),"</span> + Class_Id + <span class="string">")"</span>);</span><br><span class="line">                                int i = db.Inserts(sqladd);</span><br><span class="line">                                <span class="keyword">if</span> (i &gt; 0)</span><br><span class="line">                                &#123;</span><br><span class="line">                                    Console.WriteLine(<span class="string">"添加成功！"</span>);</span><br><span class="line">                                &#125;</span><br><span class="line">                                <span class="keyword">else</span></span><br><span class="line">                                &#123;</span><br><span class="line">                                    Console.WriteLine(<span class="string">"添加失败！"</span>);</span><br><span class="line">                                &#125;</span><br><span class="line">                                <span class="built_in">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                            <span class="keyword">case</span> <span class="string">"2"</span>:</span><br><span class="line">                            string sql = <span class="string">""</span>;</span><br><span class="line">                            Console.WriteLine(<span class="string">"按1查询全部，按2地址查询,按c查重新选择操作"</span>);</span><br><span class="line">                            string qu = Console.ReadLine();</span><br><span class="line">                            <span class="keyword">if</span> (qu == <span class="string">"1"</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                sql = string.Format(<span class="string">"select * from Students"</span>);</span><br><span class="line">                            &#125;</span><br><span class="line">                            <span class="keyword">else</span> <span class="keyword">if</span> (qu == <span class="string">"2"</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                Console.WriteLine(<span class="string">"请输入地址："</span>);</span><br><span class="line">                                string str = Console.ReadLine();</span><br><span class="line">                                sql = <span class="string">"select * from t_curriculum t join UserInfo u on t.stuid=u.userid where address like '%"</span> + str + <span class="string">"%'"</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                            <span class="keyword">else</span> <span class="keyword">if</span> (qu==<span class="string">"c"</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="built_in">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                            DataTable dt = db.Queues(sql).Tables[0];</span><br><span class="line">                            foreach (DataRow item <span class="keyword">in</span> dt.Rows)</span><br><span class="line">                            &#123;</span><br><span class="line">                                string strResult = item[<span class="string">"stu_id"</span>] + <span class="string">"\t"</span> + item[<span class="string">"stu_name"</span>] + <span class="string">"\t"</span> + item[<span class="string">"stu_sex"</span>] + <span class="string">"\t"</span> + item[<span class="string">"stu_birthday"</span>] + <span class="string">"\t"</span> + item[<span class="string">"class_id"</span>];</span><br><span class="line">                                Console.WriteLine(strResult);</span><br><span class="line">                            &#125;</span><br><span class="line">                            <span class="built_in">break</span>;</span><br><span class="line">                        <span class="keyword">case</span> <span class="string">"c"</span>:</span><br><span class="line">                            Console.Clear();</span><br><span class="line">                            <span class="built_in">continue</span>;</span><br><span class="line">                        <span class="keyword">case</span> <span class="string">"e"</span>:</span><br><span class="line">                            <span class="built_in">return</span>;</span><br><span class="line">                        default:</span><br><span class="line">                            Console.WriteLine(<span class="string">"请输入正确的操作！"</span>);</span><br><span class="line">                            Console.Clear();</span><br><span class="line">                            <span class="built_in">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;            </span><br><span class="line">             catch (Exception e)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">"错误："</span> + e.Message);</span><br><span class="line">                throw;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://www.github.com/IronMan1024" target="_blank" rel="noopener">IronMan1024</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的蛋挞<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/images/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/images/weixincode.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/28/C-使用Oracle-ManagedDataAccess操作oracle数据库/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/29/JavaScript多维数组去重/" class="archive-article-date">
-  	<time datetime="2019-07-29T10:14:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/29/JavaScript多维数组去重/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript多维数组去重</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/29/JavaScript多维数组去重/">JavaScript多维数组去重</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+
+  
+
+  
+
+
+
+
+
+
+<!-- valine 评论系统配置 -->
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "1HGmTpABGQ8v05riqYkrTkWY-gzGzoHsz",
+            app_key: "3V8jmFK6n5clYaEfboCczNTJ",
+            placeholder: "欢迎评论",
+            avatar:"mm",
+            //visitor: true //阅读量统计
+        });
+    }
+</script>
+    </section>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/26/使用C-发送邮件的一个简单分享/" class="archive-article-date">
-  	<time datetime="2019-07-26T03:44:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/26/使用C-发送邮件的一个简单分享/">使用C#发送邮件的一个简单分享</a>
-    </h1>
-  
+     <!-- id 将作为查询条件 -->
+     <!-- 阅读量统计 -->
+<!-- <span id="<Your/Path/Name>" class="leancloud-visitors" data-flag-title="Your Article Title">
+  <em class="post-meta-item-text">阅读量 </em>
+  <i class="leancloud-visitors-count">1000000</i>
+</span> -->
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/17/使用MVC-EntityFramework实现增删改查/" class="archive-article-date">
-  	<time datetime="2019-06-17T08:34:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/17/使用MVC-EntityFramework实现增删改查/">使用MVC+EntityFramework实现增删改查</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/04/EntityFramework-Code-First-数据建模/" class="archive-article-date">
-  	<time datetime="2019-06-04T06:21:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/04/EntityFramework-Code-First-数据建模/">EntityFramework Code First 数据建模</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/19/C-ADO.NET操作数据库类-SQLHelper/" class="archive-article-date">
-  	<time datetime="2019-05-19T13:53:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/19/C-ADO.NET操作数据库类-SQLHelper/">自定义C#ADO.NET操作数据库类--SQLHelper</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/15/发布hexo到GitHub/" class="archive-article-date">
-  	<time datetime="2019-05-15T05:22:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/15/发布hexo到GitHub/">发布hexo到GitHub</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/13/My-first-hexo-blog/" class="archive-article-date">
-  	<time datetime="2019-05-13T09:02:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/13/My-first-hexo-blog/">My first hexo blog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
-
           </div>
         </div>
       </div>
@@ -421,8 +411,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
